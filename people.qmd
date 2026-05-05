@@ -16,6 +16,15 @@ listing:  #an example of listing external links
   contents: 
     - people/pi.yml
 
+- id: staff
+  sort: "lastname asc"
+  type: default
+  fields: [image, title, subtitle, description]
+  image-height: 400px
+  image-align: left
+  contents: 
+    - people/staff.yml
+
 - id: postdoc
   sort: "lastname asc"
   type: default
@@ -49,6 +58,19 @@ listing:  #an example of listing external links
 #  filter-ui: true 
   contents: 
     - people/undergrad-students
+
+- id: affiliates
+  sort:
+    - "lastname asc"  
+  type: grid
+  fields: [image, title, subtitle]
+  grid-item-align: center  
+  grid-columns: 4
+  image-height: 300px
+  sort-ui: false
+  filter-ui: false
+  contents: 
+    - /people/affiliates.yml
 
 - id: lab-alumni
   sort: 
@@ -84,6 +106,11 @@ format:
 :::{#pi}
 :::
 
+## Research Staff
+
+:::{#staff}
+:::
+
 <!-- ## Postdocs
 
 :::{#postdoc}
@@ -98,6 +125,11 @@ format:
 
 :::{#undergrad-student}
 ::: -->
+
+## Affiliates
+
+:::{#affiliates}
+:::
 
 
 ## Alumni
