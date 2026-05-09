@@ -7,21 +7,20 @@ page-navigation: false
 title-block-banner: false
 date-format: "YYYY"
 listing: 
-  - id: news-posts
+  - id: pubs
     sort: "date desc"
     type: default
     page-size: 100
+    fields: [title, authors, date, subtitle]
     categories: true
     sort-ui: true
     filter-ui: true
     feed: true
-    contents: 
-        - posts
-        # - posts/post-links.yml  # Use this file to add external links
+    contents: publications.yml
 
 filters: [remove-stray-divfence.lua]  # This filter is used to remove stray ":::" strings that leak into the HTML output when Quarto's listing wrapper fenced divs are interrupted by raw HTML blocks from the EJS template.
 ---
 
-:::{#news-posts}
+:::{#pubs}
 :::
 
