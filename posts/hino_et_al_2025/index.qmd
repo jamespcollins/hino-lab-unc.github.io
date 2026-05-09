@@ -1,0 +1,48 @@
+---
+title: "Land-based sensors reveal high frequency of coastal flooding"
+description: "Coastal flooding is occurring more frequently due to global sea-level rise, among other factors. However, current understanding of coastal flood frequency and sea-level rise impacts is predominantly based on tide gauges, which do not measure water levels on land. Here, we present data from a novel network of land-based flood sensors in the state of North Carolina, USA."
+subtitle: "*Nature Communications Earth & Environment*"
+author: 
+  - name: Miyuki Hino
+  - name: Katherine Anarde
+  - name: Tessa Fridell
+  - name: Ryan McCune
+  - name: Thomas Thelen
+  - name: Elizabeth Farquhar
+  - name: Perri Woodard
+  - name: Anthony Whipple
+date: "2025-06-01"
+categories: [chronic, flooding, events, data, sensors, North Carolina]
+# image: "featured.jpg"
+citation:
+  type: article-journal
+  container-title: "Nature Communications Earth & Environment"
+  doi: "10.1038/s43247-025-02326-w"
+  # available-date: "1935-05-15"
+  # issued: "1935-05-15"
+  volume: 6
+  issue: 1
+  page: 1-6
+  url: https://onlinelibrary.wiley.com/doi/abs/10.1029/2025EF006026
+google-scholar: true
+---
+
+<!--Include academic icons or bottons-->
+
+{{< include /files/includes/_academic.qmd >}}
+
+
+## Abstract
+
+Coastal flooding is occurring more frequently due to global sea-level rise, among other factors. However, current understanding of coastal flood frequency and sea-level rise impacts is predominantly based on tide gauges, which do not measure water levels on land. Here, we present data from a novel network of land-based flood sensors in the state of North Carolina, USA. We demonstrate that tide-gauge data are poor indicators of flooding: floods occur 26-128 days annually, an order of magnitude greater than what regional tide gauges suggest in some places. Improving the accuracy of coastal flood measures is critical for identifying the impacts of sea-level rise and developing effective adaptation strategies.
+
+## Links
+
+Published [paper](https://www.nature.com/articles/s43247-025-02326-w)
+
+
+```{=html}
+<script type="text/javascript" src="https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js"></script><div class="altmetric-embed" data-badge-popover="right" data-badge-type="donut" data-doi="10.1103/PhysRev.47.777"></div>
+
+<span class="__dimensions_badge_embed__" data-doi="10.1103/PhysRev.47.777" data-hide-zero-citations="true" data-style="small_circle"></span><script async src="https://badge.dimensions.ai/badge.js" charset="utf-8"></script>
+```

@@ -4,27 +4,17 @@
     "items": []
   },
   {
-    "listing": "/index.html",
-    "items": [
-      "/posts/event-title/index.html",
-      "/posts/news-title/index.html",
-      "/posts/paper-title/index.html"
-    ]
-  },
-  {
-    "listing": "/pub-listing.html",
-    "items": []
-  },
-  {
     "listing": "/research.html",
     "items": [
-      "/posts/event-title/index.html",
-      "/posts/news-title/index.html",
-      "/posts/paper-title/index.html"
+      "/posts/hino_et_al_2025/index.html",
+      "/posts/garcia_et_al_2025/index.html"
     ]
   },
   {
-    "listing": "/projects.html",
-    "items": []
+    "listing": "/index.html",
+    "items": [
+      "/posts/hino_et_al_2025/index.html",
+      "/posts/garcia_et_al_2025/index.html"
+    ]
   }
 ]
