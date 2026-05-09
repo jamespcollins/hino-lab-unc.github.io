@@ -14,11 +14,11 @@
     border-bottom: none;
 }
 
-#listing-news-posts .quarto-post .body {
+#listing-pubs .quarto-post .body {
     order: 1;
 }
 
-#listing-news-posts .quarto-post .thumbnail {
+#listing-pubs .quarto-post .thumbnail {
     display: none;
 }
 

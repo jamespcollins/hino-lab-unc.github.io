@@ -76,20 +76,20 @@ ul.task-list li input[type="checkbox"] {
 <script>
 
   window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-news-posts .list');
+    const listingTargetEl = window.document.querySelector('#listing-pubs .list');
     if (!listingTargetEl) {
       // No listing discovered, do not attach.
       return; 
     }
 
     const options = {
-      valueNames: ['listing-date','listing-title','listing-author','listing-subtitle','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      valueNames: ['listing-title','listing-authors','listing-date','listing-subtitle',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
       
-      searchColumns: ["listing-date","listing-title","listing-author","listing-subtitle","listing-image","listing-description","listing-categories"],
+      searchColumns: ["listing-title","listing-subtitle","listing-authors","listing-date","listing-doi","listing-categories"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-news-posts'] = new List('listing-news-posts', options);
+    window['quarto-listings']['listing-pubs'] = new List('listing-pubs', options);
 
     if (window['quarto-listing-loaded']) {
       window['quarto-listing-loaded']();
@@ -213,7 +213,7 @@ window.Quarto = {
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(2)</span></div><div class="category" data-category="Y2hyb25pYw==">chronic <span class="quarto-category-count">(1)</span></div><div class="category" data-category="ZGF0YQ==">data <span class="quarto-category-count">(2)</span></div><div class="category" data-category="ZXZlbnRz">events <span class="quarto-category-count">(2)</span></div><div class="category" data-category="Zmxvb2Rpbmc=">flooding <span class="quarto-category-count">(2)</span></div><div class="category" data-category="bW9kZWw=">model <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Tm9ydGglMjBDYXJvbGluYQ==">North Carolina <span class="quarto-category-count">(2)</span></div><div class="category" data-category="c2Vuc29ycw==">sensors <span class="quarto-category-count">(1)</span></div><div class="category" data-category="U0ZIQQ==">SFHA <span class="quarto-category-count">(1)</span></div></div></div>
+    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(2)</span></div><div class="category" data-category="Y2hyb25pYyUyMGZsb29kaW5n">chronic flooding <span class="quarto-category-count">(1)</span></div><div class="category" data-category="ZGF0YQ==">data <span class="quarto-category-count">(2)</span></div><div class="category" data-category="ZXZlbnRz">events <span class="quarto-category-count">(2)</span></div><div class="category" data-category="bW9kZWw=">model <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Tm9ydGglMjBDYXJvbGluYQ==">North Carolina <span class="quarto-category-count">(2)</span></div><div class="category" data-category="cmVwZXRpdGl2ZSUyMGZsb29kaW5n">repetitive flooding <span class="quarto-category-count">(1)</span></div><div class="category" data-category="c2Vuc29ycw==">sensors <span class="quarto-category-count">(1)</span></div></div></div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
@@ -236,11 +236,11 @@ window.Quarto = {
 </header>
 
 
-<div id="listing-news-posts" class="quarto-listing quarto-listing-container-default">
+<div id="listing-pubs" class="quarto-listing quarto-listing-container-default">
 <div class="listing-actions-group">
    <div class="input-group input-group-sm quarto-listing-sort">
     <span class="input-group-text"><i class="bi bi-sort-down"></i></span>
-    <select id="listing-news-posts-sort" class="form-select" aria-label="Order By" onchange="window['quarto-listings']['listing-news-posts'].sort(this.options[this.selectedIndex].value, { order: this.options[this.selectedIndex].getAttribute('data-direction')})">
+    <select id="listing-pubs-sort" class="form-select" aria-label="Order By" onchange="window['quarto-listings']['listing-pubs'].sort(this.options[this.selectedIndex].value, { order: this.options[this.selectedIndex].getAttribute('data-direction')})">
       <option value="" disabled="" selected="" hidden="">Order By</option>
       <option value="index" data-direction="asc">Default</option>
       <option value="listing-title" data-direction="asc">
@@ -252,9 +252,6 @@ window.Quarto = {
       <option value="listing-date-sort" data-direction="desc">
         Date - Newest
       </option>
-      <option value="listing-author" data-direction="asc">
-        Author
-      </option>
     </select>
   </div>
     <div class="input-group input-group-sm quarto-listing-filter">
@@ -263,88 +260,42 @@ window.Quarto = {
     </div>
 </div>
 <div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="Y2hyb25pYyUyQ2Zsb29kaW5nJTJDZXZlbnRzJTJDZGF0YSUyQ3NlbnNvcnMlMkNOb3J0aCUyMENhcm9saW5h" data-listing-date-sort="1748754000000" data-listing-file-modified-sort="1778348949031" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="130">
-<div class="thumbnail"><a href="./posts/hino_et_al_2025/index.html" class="no-external">
-
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-
-</a></div>
+<div class="quarto-post image-right" data-index="0" data-categories="Y2hyb25pYyUyMGZsb29kaW5nJTJDZXZlbnRzJTJDZGF0YSUyQ3NlbnNvcnMlMkNOb3J0aCUyMENhcm9saW5h" data-listing-date-sort="1748754000000">
 <div class="body">
 <h3 class="no-anchor listing-title">
-<a href="./posts/hino_et_al_2025/index.html" class="no-external">Land-based sensors reveal high frequency of coastal flooding</a>
+<a href="https://www.nature.com/articles/s43247-025-02326-w" class="no-external">Land-based sensors reveal high frequency of coastal flooding</a>
 </h3>
 <div class="listing-subtitle">
-<a href="./posts/hino_et_al_2025/index.html" class="no-external"><em>Nature Communications Earth &amp; Environment</em></a>
+<a href="https://www.nature.com/articles/s43247-025-02326-w" class="no-external">Nature Communications Earth &amp; Environment</a>
 </div>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('Y2hyb25pYw=='); return false;">chronic</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('Zmxvb2Rpbmc='); return false;">flooding</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('ZXZlbnRz'); return false;">events</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('ZGF0YQ=='); return false;">data</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('c2Vuc29ycw=='); return false;">sensors</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('Tm9ydGglMjBDYXJvbGluYQ=='); return false;">North Carolina</div>
-
-</div>
-<div class="delink listing-description"><a href="./posts/hino_et_al_2025/index.html" class="no-external">
-<p>Coastal flooding is occurring more frequently due to global sea-level rise, among other factors. However, current understanding of coastal flood frequency and sea-level rise impacts is predominantly based on tide gauges, which do not measure water levels on land. Here, we present data from a novel network of land-based flood sensors in the state of North Carolina, USA.</p>
-</a></div>
 </div>
 <div class="metadata">
-<a href="./posts/hino_et_al_2025/index.html" class="no-external">
+<a href="https://www.nature.com/articles/s43247-025-02326-w" class="no-external">
 <div class="listing-date">
 2025
 </div>
-<div class="listing-author">
-Miyuki Hino, Katherine Anarde, Tessa Fridell, Ryan McCune, Thomas Thelen, Elizabeth Farquhar, Perri Woodard, Anthony Whipple
+<div class="metadata-value listing-authors">
+Hino, Miyuki and Anarde, Katherine and Fridell, Tessa and McCune, Ryan and Thelen, Thomas and Farquhar, Elizabeth and Woodard, Perri and Whipple, Anthony
 </div>
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="1" data-categories="bW9kZWwlMkNmbG9vZGluZyUyQ2V2ZW50cyUyQ2RhdGElMkNTRkhBJTJDTm9ydGglMjBDYXJvbGluYQ==" data-listing-date-sort="1735711200000" data-listing-file-modified-sort="1778348754992" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="271">
-<div class="thumbnail"><a href="./posts/garcia_et_al_2025/index.html" class="no-external">
-
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-
-</a></div>
+<div class="quarto-post image-right" data-index="1" data-categories="bW9kZWwlMkNldmVudHMlMkNkYXRhJTJDcmVwZXRpdGl2ZSUyMGZsb29kaW5nJTJDTm9ydGglMjBDYXJvbGluYQ==" data-listing-date-sort="1735711200000">
 <div class="body">
 <h3 class="no-anchor listing-title">
-<a href="./posts/garcia_et_al_2025/index.html" class="no-external">Reconstructing Repetitive Flood Exposure Across 78 Events From 1996 to 2020 in North Carolina, USA</a>
+<a href="https://onlinelibrary.wiley.com/doi/abs/10.1029/2025EF006026" class="no-external">Reconstructing Repetitive Flood Exposure Across 78 Events From 1996 to 2020 in North Carolina, USA</a>
 </h3>
 <div class="listing-subtitle">
-<a href="./posts/garcia_et_al_2025/index.html" class="no-external"><em>Earth’s Future</em></a>
+<a href="https://onlinelibrary.wiley.com/doi/abs/10.1029/2025EF006026" class="no-external">Earth’s Future</a>
 </div>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('bW9kZWw='); return false;">model</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('Zmxvb2Rpbmc='); return false;">flooding</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('ZXZlbnRz'); return false;">events</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('ZGF0YQ=='); return false;">data</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('U0ZIQQ=='); return false;">SFHA</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('Tm9ydGglMjBDYXJvbGluYQ=='); return false;">North Carolina</div>
-
-</div>
-<div class="delink listing-description"><a href="./posts/garcia_et_al_2025/index.html" class="no-external">
-<p>Measuring flooding through time is crucial for understanding exposure and vulnerability — key components to estimating flood risks and impacts. Yet, historical records of flood inundation are sparse. In this study, we reconstruct flood extents for 78 damaging events in eastern North Carolina between 1996 and 2020 using high-resolution geospatial data and address-level National Flood Insurance Program (NFIP) records.</p>
-</a></div>
 </div>
 <div class="metadata">
-<a href="./posts/garcia_et_al_2025/index.html" class="no-external">
+<a href="https://onlinelibrary.wiley.com/doi/abs/10.1029/2025EF006026" class="no-external">
 <div class="listing-date">
 2025
 </div>
-<div class="listing-author">
-Helena M. Garcia, Antonia Sebastian, Kieran P. Fitzmaurice, Miyuki Hino, Elyssa L. Collins, Gregory W. Characklis
+<div class="metadata-value listing-authors">
+Garcia, Helena M. and Sebastian, Antonia and Fitzmaurice, Kieran P. and Hino, Miyuki and Collins, Elyssa L. and Characklis, Gregory W.
 </div>
 </a>
 </div>
