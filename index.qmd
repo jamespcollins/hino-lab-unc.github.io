@@ -51,8 +51,7 @@ listing:   # Comment the listing section and delete corresponding lines in the i
   - id: recent-posts
     contents: 
       - posts
-      - publications.yml
-      - posts/post-links.yml
+      # - posts/post-links.yml
     exclude:
       title: ""
     type: grid
